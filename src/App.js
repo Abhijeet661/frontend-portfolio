@@ -4,7 +4,7 @@ function App() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/projects/")
+    fetch("https://backend-portfolio-jlyx.onrender.com/api/projects/")
       .then((res) => res.json())
       .then((data) => setProjects(data))
       .catch((err) => console.error("Error:", err));
