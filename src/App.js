@@ -1,34 +1,45 @@
 import React from "react";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
-    <div className="font-sans bg-gray-50 text-gray-900">
-      {/* 🧭 Navigation Header */}
-      <Header />
+    <div className="bg-gray-900 text-gray-100 min-h-screen font-sans">
+      {/* Navbar */}
+      <Navbar />
 
-      {/* 🧑‍💻 About Section */}
-      <About />
+      {/* Hero Section */}
+      <section id="home">
+        <Hero />
+      </section>
 
-      {/* ⚙️ Skills Section */}
-      <Skills />
+      {/* About Section */}
+      <section id="about" className="py-16">
+        <About />
+      </section>
 
-      {/* 💼 Projects Section */}
-      <Projects />
+      {/* Skills Section */}
+      <section id="skills" className="py-16 bg-gray-800">
+        <Skills />
+      </section>
 
-      {/* 📬 Contact Section */}
-      <Contact />
+      {/* Projects Section */}
+      <section id="projects" className="py-16">
+        <Projects />
+      </section>
 
-      {/* 👣 Footer */}
-      <footer className="bg-gray-800 text-gray-300 text-center py-4 mt-8">
-        <p>© {new Date().getFullYear()} Abhijit Wankhede | Built with Django & React ⚡</p>
-      </footer>
+      {/* Contact Section */}
+      <section id="contact" className="py-16 bg-gray-800">
+        <Contact />
+      </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
-
-export default App;
